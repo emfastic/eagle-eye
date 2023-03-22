@@ -52,10 +52,7 @@ export default function Home() {
                   🔎
                 </span>
               </h1>
-              <p className="mt-2 text-xl text-gray-600 mt-4">
-                Discover courses you love and get email updates when seats open
-                up
-              </p>
+                <p className="mt-2 text-xl text-gray-600 mt-4">Discover courses you love and get <a href="https://forms.gle/1WFVyuVvY5bHPuTh7" target="_blank" className="text-red-500 font-bold" rel="noopener noreferrer">email updates</a> when seats open up</p>
             </div>
             <a
               href="https://services.bc.edu/password/external/launcher/generic.do?id=Explorance"
@@ -72,7 +69,6 @@ export default function Home() {
         <div className="mt-2.5">
           <SearchBar setLoading={setLoading} onResults={onResults} presetValue={searchValue}/>
         </div>
-
         <div className="container mx-auto px-4 mt-8 mb-8">
           <div className="flex flex-col items-center space-y-2">
             {matchedCourses.length === 0 && !loading ? (
