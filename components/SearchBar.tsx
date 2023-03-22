@@ -28,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading, presetValu
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query: searchInputRef.current?.value,
-        searchResults: 20,
+        searchResults: 100,
       }),
     });
 
