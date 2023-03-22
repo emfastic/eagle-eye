@@ -63,7 +63,11 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
 
     let formattedName = name.split(",");
     console.log(formattedName);
-    formattedName = [formattedName[1].split(" ")[1], formattedName[0]];
+    if (formattedName.length > 1) {
+      formattedName = [formattedName[1].split(" ")[1], formattedName[0]];
+    } else {
+      formattedName = formattedName[0].split(" ");
+    }
     const stringName = formattedName.join("%20");
 
     return stringName;
