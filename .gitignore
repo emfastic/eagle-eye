@@ -4,9 +4,10 @@ npm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+next-env.d.ts
 
 # Next.js
-/.next/
+.next
 /out/
 
 # IDEs and Editors
