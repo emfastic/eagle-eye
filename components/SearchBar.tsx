@@ -11,8 +11,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading, presetValu
   const searchInputRef = React.useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (presetValue !== "" && searchInputRef) {
-      searchInputRef.current.value = presetValue
+    if (presetValue !== "") {
+      if (searchInputRef.current) {
+        searchInputRef.current.value = presetValue;
+      }
     } 
   }, [])
 
