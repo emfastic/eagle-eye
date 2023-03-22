@@ -6,6 +6,7 @@ import CustomHeader from "../../components/CustomHeader";
 export default function Home() {
   const [matchedCourses, setMatchedCourses] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [searchValue, setSearchValue] = useState<string>("")
 
   const onResults = (matches: any[]) => {
     if (matchedCourses.length > 0) {
@@ -69,7 +70,7 @@ export default function Home() {
         </header>
 
         <div className="mt-2.5">
-          <SearchBar setLoading={setLoading} onResults={onResults} />
+          <SearchBar setLoading={setLoading} onResults={onResults} presetValue={searchValue}/>
         </div>
 
         <div className="container mx-auto px-4 mt-8 mb-8">
@@ -80,61 +81,61 @@ export default function Home() {
                   Need some ideas? Try one of these searches:
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Expert Level Storytelling")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Expert Level Storytelling
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Science Fiction and AI")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Science Fiction and AI
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("How to Think")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">How to Think</h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("The Art of Negotiation")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         The Art of Negotiation
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Real-world Finance and Accounting")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Real-world Finance and Accounting
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("The Psychology of Happiness")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         The Psychology of Happiness
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Communication Skills 101")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Communication Skills 101
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Digital Media Ethics")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Digital Media Ethics
                       </h3>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg shadow-lg">
+                  <div className="bg-white rounded-lg shadow-lg cursor-pointer" onClick={() => setSearchValue("Bioengineering and Society")}>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2">
                         Bioengineering and Society

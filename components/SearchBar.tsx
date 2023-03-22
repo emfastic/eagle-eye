@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Define the type for the SearchBar props
 type SearchBarProps = {
   onResults: (matches: any[]) => void;
   setLoading: (loading: boolean) => void;
+  presetValue: string
 };
 
-const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading, presetValue }) => {
   const searchInputRef = React.useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (presetValue !== "" && searchInputRef) {
+      searchInputRef.current.value = presetValue
+    } 
+  }, [])
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,6 +43,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading }) => {
         <form className="flex items-center" onSubmit={onSubmit}>
           <input
             ref={searchInputRef}
+            defaultValue={presetValue}
             type="text"
             className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:shadow"
             placeholder="Search for courses..."
