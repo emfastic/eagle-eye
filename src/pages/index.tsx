@@ -74,7 +74,7 @@ export default function Home() {
 
         <div className="container mx-auto px-4 mt-8 mb-8">
           <div className="flex flex-col items-center space-y-2">
-            {matchedCourses.length === 0 ? (
+            {matchedCourses.length === 0 && !loading ? (
               <div className="max-w-6xl mx-auto py-8">
                 <h2 className="text-3xl font-bold mb-4">
                   Need some ideas? Try one of these searches:

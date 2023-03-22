@@ -7,20 +7,19 @@ type SearchBarProps = {
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading }) => {
-
   const searchInputRef = React.useRef<HTMLInputElement>(null);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setLoading(true);
-    
+
     const response = await fetch("/api/get_courses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query: searchInputRef.current?.value,
-        searchResults: 5,
+        searchResults: 20,
       }),
     });
 
@@ -29,9 +28,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onResults, setLoading }) => {
     setLoading(false);
 
     onResults(jsonResponse.matches);
-
   };
-    
+
   return (
     <div className="mt-2.5 flex items-center justify-center">
       <div className="bg-white p-4 rounded-lg shadow-lg w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 mx-auto sm:mx-4">

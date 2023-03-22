@@ -17,8 +17,13 @@ const CustomHeader = () => {
         property="og:image:alt"
         content="Eagle Eye: Explore Courses and Get Notified (in a red gradient)"
       />
-      <meta name="twitter:card" content="/image.png" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Eagle Eye" />
+      <meta name="twitter:image" content="/image.png" />
+      <meta
+        name="twitter:image:alt"
+        content="Eagle Eye: Explore Courses and Get Notified (in a red gradient)"
+      />
       <meta name="twitter:site" content="@jakeottiger" />
       <meta
         name="twitter:description"
