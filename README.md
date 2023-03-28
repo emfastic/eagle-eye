@@ -2,7 +2,7 @@
 
 Eagle Eye is a website that enables a seamless semantic search across **all 2,080 Boston College courses** and provides students with email notifications when seats open up.
 
-![Eagle Eye Open Graph Image](/public/image.png)
+![Eagle Eye Open Graph Image](/public/eaglesearch.png)
 
 ## Stats
 
