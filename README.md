@@ -1,8 +1,8 @@
-# [Eagle Eye](https://www.eaglesearch.org/)
+# [Eagle Search](https://www.eaglesearch.org/)
 
-Eagle Eye is a website that enables a seamless semantic search across **all 2,080 Boston College courses** and provides students with email notifications when seats open up.
+Eagle Search is a website that enables a seamless semantic search across **all 2,080 Boston College courses** and provides students with email notifications when seats open up.
 
-![Eagle Eye Open Graph Image](/public/eaglesearch.png)
+![Eagle Search Open Graph Image](/public/eaglesearch.png)
 
 ## Stats
 
